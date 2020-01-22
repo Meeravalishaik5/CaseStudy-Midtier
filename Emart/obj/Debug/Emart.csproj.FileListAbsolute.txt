@@ -1,0 +1,6 @@
+E:\CaseStudy\Emart\bin\Debug\Emart.exe.config
+E:\CaseStudy\Emart\bin\Debug\Emart.exe
+E:\CaseStudy\Emart\bin\Debug\Emart.pdb
+E:\CaseStudy\Emart\obj\Debug\Emart.csprojAssemblyReference.cache
+E:\CaseStudy\Emart\obj\Debug\Emart.exe
+E:\CaseStudy\Emart\obj\Debug\Emart.pdb
