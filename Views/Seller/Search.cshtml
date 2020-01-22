@@ -1,0 +1,42 @@
+﻿@model EmartMVC.Models.Seller;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Seller ID </td>
+            <td>Seller Name </td>
+            <td>Seller Password </td>
+            <td>Seller CompanyName </td>
+            <td>GSTIN </td>
+            <td>About Company  </td>
+            <td>Email ID </td>
+            <td>Address</td>
+            <td>Website</td>
+            <td>Email ID </td>
+            <td>Mobile NO </td>
+        </tr>
+        <tr>
+            <td>@Model.sid</td>
+            <td>@Model.sname</td>
+            <td>@Model.spassword</td>
+            <td>@Model.scompanyname </td>
+            <td>@Model.sgstin</td>
+            <td>@Model.saboucompany </td>
+            <td>@Model.semailid </td>
+            <td>@Model.saddress</td>
+            <td>@Model.swebsite</td>
+            <td>@Model.semailid </td>
+            <td>@Model.smobileno </td>
+        </tr>
+    </table>
+</body>
+</html>

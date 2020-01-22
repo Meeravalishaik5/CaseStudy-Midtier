@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EmartMVC.Models.Seller>;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Seller ID </td>
+            <td>Seller Name </td>
+            <td>Seller Password </td>
+            <td>Seller CompanyName </td>
+            <td>GSTIN </td>
+            <td>About Company  </td>
+            <td>Email ID </td>
+            <td>Address</td>
+            <td>Website</td>
+            <td>Email ID </td>
+            <td>Mobile NO </td>
+        </tr>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.sid</td>
+                <td>@e.sname</td>
+                <td>@e.spassword</td>
+                <td>@e.scompanyname </td>
+                <td>@e.sgstin</td>
+                <td>@e.saboucompany </td>
+                <td>@e.semailid </td>
+                <td>@e.saddress</td>
+                <td>@e.swebsite</td>
+                <td>@e.semailid </td>
+                <td>@e.smobileno </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
