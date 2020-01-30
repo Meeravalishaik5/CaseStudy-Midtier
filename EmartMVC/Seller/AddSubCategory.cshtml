@@ -1,0 +1,48 @@
+﻿@model EmartMvcCaseStudy.Models.SubCategory
+
+@{
+    ViewData["Title"] = "AddSubCategory";
+}
+
+<h1>AddSubCategory</h1>
+
+<h4>SubCategory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddSubCategory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SNAME" class="control-label"></label>
+                <input asp-for="SNAME" class="form-control" />
+                <span asp-validation-for="SNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CID" class="control-label"></label>
+                <input asp-for="CID" class="form-control" />
+                <span asp-validation-for="CID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ABOUTSUBCATEGORY" class="control-label"></label>
+                <input asp-for="ABOUTSUBCATEGORY" class="form-control" />
+                <span asp-validation-for="ABOUTSUBCATEGORY" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GST" class="control-label"></label>
+                <input asp-for="GST" class="form-control" />
+                <span asp-validation-for="GST" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddSubCategory" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <h3 class="text-primary">@ViewBag.msg</h3>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="SellerOP">Back to Previous Page</a>
+</div>
+

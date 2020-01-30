@@ -1,0 +1,72 @@
+﻿@model EmartMvcCaseStudy.Models.Items
+
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<h1>AddProduct</h1>
+
+<h4>Items</h4>
+<hr />
+<h3 class="text-right"><a asp-action="Login">Logout</a></h3>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CID" class="control-label"></label>
+                <input asp-for="CID" class="form-control" />
+                <span asp-validation-for="CID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SCID" class="control-label"></label>
+                <input asp-for="SCID" class="form-control" />
+                <span asp-validation-for="SCID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="INAME" class="control-label"></label>
+                <input asp-for="INAME" class="form-control" />
+                <span asp-validation-for="INAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IPRICE" class="control-label"></label>
+                <input asp-for="IPRICE" class="form-control" />
+                <span asp-validation-for="IPRICE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ABOUTITEM" class="control-label"></label>
+                <input asp-for="ABOUTITEM" class="form-control" />
+                <span asp-validation-for="ABOUTITEM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STOCK" class="control-label"></label>
+                <input asp-for="STOCK" class="form-control" />
+                <span asp-validation-for="STOCK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="remarks" class="control-label"></label>
+                <input asp-for="remarks" class="form-control" />
+                <span asp-validation-for="remarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" type="file" accept="jpg/jpeg/png" onchange="fileCheck(this)"/>
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            @ViewBag.msg
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="SellerOP">Back to Previous Page</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

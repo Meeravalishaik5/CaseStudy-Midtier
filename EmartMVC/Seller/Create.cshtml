@@ -1,0 +1,72 @@
+﻿@model EmartMvcCaseStudy.Models.Seller
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Seller</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SUSERNAME" class="control-label"></label>
+                <input asp-for="SUSERNAME" class="form-control" />
+                <span asp-validation-for="SUSERNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SPASSWORD" class="control-label"></label>
+                <input asp-for="SPASSWORD" class="form-control" />
+                <span asp-validation-for="SPASSWORD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SCOMPANYNAME" class="control-label"></label>
+                <input asp-for="SCOMPANYNAME" class="form-control" />
+                <span asp-validation-for="SCOMPANYNAME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SGSTIN" class="control-label"></label>
+                <input asp-for="SGSTIN" class="form-control" />
+                <span asp-validation-for="SGSTIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SADDRESS" class="control-label"></label>
+                <input asp-for="SADDRESS" class="form-control" />
+                <span asp-validation-for="SADDRESS" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SWEBSITE" class="control-label"></label>
+                <input asp-for="SWEBSITE" class="form-control" />
+                <span asp-validation-for="SWEBSITE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SMOBILENO" class="control-label"></label>
+                <input asp-for="SMOBILENO" class="form-control" />
+                <span asp-validation-for="SMOBILENO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SEMAILID" class="control-label"></label>
+                <input asp-for="SEMAILID" class="form-control" />
+                <span asp-validation-for="SEMAILID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <div class="text-primary">
+            <h5>@ViewBag.msg</h5>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h4>Existing User..Click To..<a asp-action="Login">Login</a></h4>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
